@@ -22,7 +22,13 @@ Pawn::Pawn(const Pawn& orig) {
 Pawn::~Pawn() {
 }
 
-bool Pawn::validarMovimiento(){
-    return true;
+bool Pawn::validarMovimiento(int origen_y, int origen_x, int destination_y, int destination_x){
+    if ( (destination_y == origen_y + 1) && destination_y >= 0 && (destination_x == origen_x) ) {
+        return true;
+    } else if ( (destination_y == origen_y - 1) && destination_y >= 0 && (destination_x == origen_x) ) {
+        return true;
+    } else {
+        return false;
+    }
 }
 

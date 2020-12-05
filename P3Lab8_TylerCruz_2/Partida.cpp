@@ -22,10 +22,11 @@ Partida::Partida(const Partida& orig) {
 Partida::~Partida() {
 }
 
-void Partida::writeFile(){
+void Partida::writeFile(string word){
     ofstream write;
     write.open("bitacoraPartidas.txt",std::ofstream::app);
-    //Escribir<<c<<";"<<n<<";"<<e<<endl;
+//    write<<word<<";"<<n<<";"<<e<<endl;
+    write<<word<<endl;
     write.close();
 }
 

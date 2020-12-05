@@ -17,6 +17,8 @@
 #include <string>
 #include <vector>
 #include "Pieza.h"
+#include <iostream>
+using std::endl;
 using std::ofstream;
 using std::ifstream;
 using std::string;
@@ -28,7 +30,7 @@ public:
     Partida(const Partida& orig);
     virtual ~Partida();
     
-    void writeFile();
+    void writeFile(string);
 private:
     ofstream write;
     string name;

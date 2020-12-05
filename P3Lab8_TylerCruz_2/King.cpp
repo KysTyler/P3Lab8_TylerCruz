@@ -22,8 +22,21 @@ King::King(const King& orig) {
 King::~King() {
 }
 
-bool King::validarMovimiento(){
-    
-    return true;
+bool King::validarMovimiento(int origen_y, int origen_x, int destination_y, int destination_x){
+    if ( ((destination_x == origen_x + 1) || (destination_x == origen_x - 1)) && destination_y == origen_y && (origen_x - 1 > 0 || origen_x + 1 > 0) ) {
+        return true;
+    } else if ( ((destination_y == origen_y + 1) || (destination_y == origen_y - 1)) && destination_x == origen_x && (origen_y - 1 > 0 || origen_y + 1 > 0) ) {
+        return true;
+    } else if ( (destination_y == origen_y + 1 && destination_x == origen_x + 1) && origen_x + 1 > 0 && origen_y + 1 > 0 ) {
+        return true;
+    } else if ( (destination_y == origen_y - 1 && destination_x == origen_x - 1) && origen_x - 1 > 0 && origen_y - 1 > 0 ) {
+        return true;
+    } else if ( (destination_y == origen_y - 1 && destination_x == origen_x + 1) && origen_x + 1 > 0 && origen_y - 1 > 0 ) {
+        return true;
+    } else if ( (destination_y == origen_y + 1 && destination_x == origen_x - 1) && origen_x - 1 > 0 && origen_y + 1 > 0 ) {
+        return true;
+    } else {
+        return false;
+    }
 }
 

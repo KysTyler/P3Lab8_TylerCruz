@@ -22,7 +22,25 @@ Knight::Knight(const Knight& orig) {
 Knight::~Knight() {
 }
 
-bool Knight::validarMovimiento(){
-    return true;
+bool Knight::validarMovimiento(int origen_y, int origen_x, int destination_y, int destination_x){
+    if ( (destination_y == origen_y + 2) && (destination_x = origen_x + 1) ) {
+        return true;
+    } else if ( (destination_y == origen_y + 2) && (destination_x = origen_x - 1) ) {
+        return true;
+    } else if ( (destination_y == origen_y - 2) && (destination_x = origen_x - 1) ) {
+        return true;
+    } else if ( (destination_y == origen_y - 2) && (destination_x = origen_x + 1) ) {
+        return true;
+    } else if ( (destination_x == origen_x + 2) && (destination_y = origen_y + 1) ) {
+        return true;
+    } else if ( (destination_x == origen_x + 2) && (destination_y = origen_y - 1) ) {
+        return true;
+    } else if ( (destination_x == origen_x - 2) && (destination_y = origen_y - 1) ) {
+        return true;
+    } else if ( (destination_x == origen_x + 2) && (destination_y = origen_y + 1) ) {
+        return true;
+    } else {
+        return false;
+    }
 }
 

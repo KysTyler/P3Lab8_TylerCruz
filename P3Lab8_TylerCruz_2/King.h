@@ -24,7 +24,7 @@ public:
     King(const King& orig);
     virtual ~King();
     
-    virtual bool validarMovimiento();
+    virtual bool validarMovimiento(int,int,int,int);
     
 private:
     string location;

@@ -22,7 +22,13 @@ Rook::Rook(const Rook& orig) {
 Rook::~Rook() {
 }
 
-bool Rook::validarMovimiento(){
-    return true;
+bool Rook::validarMovimiento(int origen_y, int origen_x, int destination_y, int destination_x){
+    if ( (destination_y >= 0 && destination_y <= 7)  && destination_x == origen_x ) {
+        return true;
+    } else if ( (destination_x >= 0 && destination_x <= 7)  && destination_y == origen_y ) {
+        return true;
+    } else {
+        return false;
+    }
 }
 

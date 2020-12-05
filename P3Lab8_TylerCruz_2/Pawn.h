@@ -22,7 +22,7 @@ public:
     Pawn(const Pawn& orig);
     virtual ~Pawn();
     
-    virtual bool validarMovimiento();
+    virtual bool validarMovimiento(int,int,int,int);
 private:
     string location;
 };

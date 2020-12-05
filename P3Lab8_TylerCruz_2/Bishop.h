@@ -22,7 +22,7 @@ public:
     Bishop();
     Bishop(const Bishop& orig);
     virtual ~Bishop();
-    virtual bool validarMovimiento();
+    virtual bool validarMovimiento(int,int,int,int);
 private:
     string location;
 };

@@ -21,7 +21,7 @@ public:
     Queen();
     Queen(const Queen& orig);
     virtual ~Queen();
-    virtual bool validarMovimiento();
+    virtual bool validarMovimiento(int,int,int,int);
 private:
     string location;
 };

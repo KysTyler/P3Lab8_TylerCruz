@@ -22,7 +22,7 @@ public:
     Rook(const Rook& orig);
     virtual ~Rook();
     
-    virtual bool validarMovimiento();
+    virtual bool validarMovimiento(int,int,int,int);
 private:
     string location;
 };

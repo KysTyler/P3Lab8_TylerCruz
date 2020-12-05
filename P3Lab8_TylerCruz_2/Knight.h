@@ -23,7 +23,7 @@ public:
     Knight(const Knight& orig);
     virtual ~Knight();
     
-    virtual bool validarMovimiento();
+    virtual bool validarMovimiento(int,int,int,int);
 private:
     string location;
 };
